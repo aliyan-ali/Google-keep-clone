@@ -75,7 +75,7 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
+  padding: 10;
   margin: 0;
 }
 
@@ -92,3 +92,29 @@ a {
   text-decoration: none;
 }
 
+.input {
+  outline: none;
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 350px;
+  color: #f3b604;
+  font-weight: 700;
+}
+.btn {
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 10px 3px;
+  font-size: 1.5rem;
+  color: #f3b604;
+  background-color: white;
+  cursor: pointer;
+
+
+}
+.btn:hover {
+  background-color: #f3b604;
+  color: white;
+}.btn:active {
+ border: 2px solid transparent;
+}
