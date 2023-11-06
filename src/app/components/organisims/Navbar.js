@@ -6,9 +6,7 @@ import LeftSideBar from "../molecules/LeftSIdeBar";
 
 
 const Navbar = () => {
-  const test = ()=>{
-    alert()
-  }
+  
   return (
     <>
       <nav className="navbar">

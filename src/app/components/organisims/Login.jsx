@@ -5,6 +5,8 @@ import SigninForm from "../molecules/SigninForm";
 import { auth } from "../../Firebase";
 import { useRouter } from "next/navigation"; // Correct import
 import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase/auth'
+import { doc, setDoc } from "firebase/firestore";
+import { firestore } from "../../Firebase";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -19,19 +21,41 @@ function Login() {
         email,
         password
       );
-      // User signed up successfully
       const user = userCredential.user;
-      updateProfile(user,{
-        displayName:`${name}`,//remove  if error
-      })
+      // User signed up successfully
+
+
+      // //create a user doc in firestore
+        const userDocRef = doc(firestore, "users",user.uid); 
+
+        // define a user data to store in firebase store
+        const userData = {
+          name,
+          email,  
+          role:'user'
+        };
+
+        await setDoc(userDocRef, userData);//creates user document
+        console.log(userDocRef);
+        console.log("user document created in firestore");
+        
+        console.log(name, email);
+
+
+
+
       console.log("User signed up:", user);
 
-      router.push("/start");
+      router.push("/Start");
     } catch (error) {
-      // Handle errors
       console.error("Error signing up:", error);
     }
   };
+  const routeToLogin = ()=> {
+
+      router.push("/Signin");
+  }
+
 
   return (
     <div className="Login-container">
@@ -44,6 +68,7 @@ function Login() {
         setEmail={setEmail}
         setPassword={setPassword}
         onSubmit={handleSignup}
+        router={routeToLogin}
       />
     </div>
   );

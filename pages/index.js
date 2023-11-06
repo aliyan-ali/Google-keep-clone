@@ -24,8 +24,9 @@ import styles from './pages.css'
 import Login from "@/app/components/organisims/Login";
 
 
+
 function index () {
-    return (
+    return ( 
         <main>
             <Login/>
         </main>

@@ -5,7 +5,7 @@ import styles from './sidenav.css'
 function Sidenav() {
   return (
     <div className='sidebar-container'>
-        <sidebar />
+        <Sidebar />
     </div>
   )
 }

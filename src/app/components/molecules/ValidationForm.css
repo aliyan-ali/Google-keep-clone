@@ -6,11 +6,13 @@
     justify-content: space-evenly;
     padding: 60px 0px;
 }
+
 .sign-input {
     display: flex;
     flex-direction: column;
     padding: 20px 0px;
 }
+
 .signin-btn {
     display: flex;
     justify-content: space-between;
@@ -20,10 +22,13 @@
     width: 350px;
 
 }
-.signin-btn:hover , .signup-btn:hover {
+
+.signin-btn:hover,
+.signup-btn:hover {
     background-color: #f3b604;
     box-shadow: 2px -1px 15px white;
 }
+
 .signup-btn {
     background-color: transparent;
     color: white;
@@ -35,8 +40,9 @@
     margin-bottom: 10px;
     font-size: 1.4rem;
 }
+
 .p {
-    margin-top: 40px;
+    margin-top: 50px;
     margin-left: 10px;
     color: rgb(74, 74, 74);
 }

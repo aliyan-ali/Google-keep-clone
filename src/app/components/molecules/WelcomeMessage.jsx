@@ -5,7 +5,7 @@ function WelcomeMessage() {
   return (
     <div className='Welcome-container'>
         <h1 className='signin-msg'>Get Started</h1>
-        <span className='signin-span'>Signup to continue making Notes..</span>
+        <span className='signin-span'>Signup to start making Notes..</span>
     </div>
   )
 }
